@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bhuvana Vijay — Power BI Developer, Data Analyst and BI Analyst portfolio. PL-300 certified with experience in Power BI, Tableau, SQL, Python and data visualization.">
+<title>Bhuvana Vijay | Power BI Developer • Data Analyst • BI Analyst</title>
+<style>
+:root{
+  --bg:#f7f9fc; --surface:#ffffff; --ink:#172033; --muted:#5f6b7a;
+  --line:#e6eaf0; --accent:#ff7a3d; --accent2:#7c5cff; --navy:#18243b;
+  --shadow:0 18px 55px rgba(23,32,51,.09); --radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(247,249,252,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(230,234,240,.8)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.4px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:24px;font-size:14px;color:var(--muted)}
+.navlinks a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;font-weight:700;border:1px solid var(--line);background:var(--surface)}
+.btn.primary{background:var(--navy);color:white;border-color:var(--navy)}
+.hero{padding:92px 0 72px;background:linear-gradient(135deg,#f7f9fc 0%,#eef3ff 55%,#fff4ed 100%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+.eyebrow{display:inline-flex;padding:7px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12px;font-weight:800;color:var(--accent)}
+h1{font-size:clamp(44px,6vw,72px);line-height:1.02;letter-spacing:-3px;margin:18px 0}
+.hero p{font-size:19px;color:var(--muted);max-width:700px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.profile-card{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:28px;padding:28px}
+.profile-top{display:flex;align-items:center;gap:18px}
+.avatar{width:74px;height:74px;border-radius:20px;background:var(--navy);color:white;display:grid;place-items:center;font-size:26px;font-weight:800}
+.profile-card h3{margin:0}.profile-card small{color:var(--muted)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.badge{padding:8px 10px;border-radius:10px;background:#f1f4f8;font-size:12px;font-weight:700}
+section{padding:78px 0}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:30px}
+.kicker{font-size:12px;color:var(--accent);font-weight:900;text-transform:uppercase;letter-spacing:1.5px}
+h2{font-size:36px;letter-spacing:-1.5px;margin:6px 0}
+.lead{color:var(--muted);max-width:680px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:25px;box-shadow:0 10px 30px rgba(23,32,51,.04)}
+.card h3{margin:8px 0}.card p{color:var(--muted);font-size:14px}
+.icon{width:42px;height:42px;border-radius:12px;background:#fff0e8;display:grid;place-items:center;font-weight:900;color:var(--accent)}
+.project{overflow:hidden;padding:0}.project img{width:100%;display:block;background:#eef2f7}.project-body{padding:25px}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.tag{font-size:11px;padding:6px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.project ul{padding-left:18px;color:var(--muted);font-size:14px}
+.project .links{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.skill{background:var(--surface);border:1px solid var(--line);padding:18px;border-radius:16px;font-weight:750}
+.skill small{display:block;color:var(--muted);font-weight:500;margin-top:3px}
+.timeline{border-left:2px solid #dfe5ef;margin-left:10px;padding-left:28px}
+.timeline-item{position:relative;margin-bottom:32px}.timeline-item:before{content:"";position:absolute;left:-37px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:4px solid var(--bg)}
+.timeline-item h3{margin:0}.timeline-item .meta{font-size:13px;color:var(--accent);font-weight:800}.timeline-item p{color:var(--muted)}
+.cert{display:flex;align-items:center;gap:16px}.cert-icon{width:48px;height:48px;border-radius:14px;background:#e9f4ff;display:grid;place-items:center;font-weight:900;color:#1473b8}
+.contact{background:var(--navy);color:white;border-radius:30px;padding:48px}.contact p{color:#cbd5e5}.contact a{color:white}
+footer{padding:35px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:20px}
+@media(max-width:850px){.hero-grid,.grid3{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.hero{padding-top:60px}}
+@media(max-width:520px){h1{letter-spacing:-2px}.skills{grid-template-columns:1fr}.contact{padding:30px}.section-head{display:block}}
+</style>
+</head>
+<body>
+<nav><div class="container navin">
+  <a class="logo" href="#home">Bhuvana<span>.</span></a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+  </div>
+  <a class="btn primary" href="Bhuvana_Vijay_Resume.pdf" download>Download Resume</a>
+</div></nav>
+
+<header id="home" class="hero">
+<div class="container hero-grid">
+  <div>
+    <span class="eyebrow">MICROSOFT PL-300 CERTIFIED • 1.4 YEARS EXPERIENCE</span>
+    <h1>Power BI Developer.<br>Data Analyst.<br>BI Storyteller.</h1>
+    <p>I turn operational and business data into reliable, interactive dashboards and actionable insights using Power BI, Tableau, SQL, Python and modern data-transformation workflows.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">View My Projects →</a>
+      <a class="btn" href="https://www.linkedin.com/in/bhuvana-vijay" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-top"><div class="avatar">BV</div><div><h3>Bhuvana Vijay</h3><small>Data Analyst · Texcoms Worldwide</small></div></div>
+    <div class="badges">
+      <span class="badge">Power BI</span><span class="badge">Tableau</span><span class="badge">DAX</span><span class="badge">Power Query</span>
+      <span class="badge">SQL / MySQL</span><span class="badge">Python / Pandas</span><span class="badge">Excel</span><span class="badge">ETL</span>
+    </div>
+  </div>
+</div>
+</header>
+
+<section id="about"><div class="container">
+<div class="section-head"><div><div class="kicker">About</div><h2>Analytics with a business purpose.</h2></div>
+<p class="lead">My work combines data extraction, validation, ETL, dashboarding and business analysis—so the output is not just a report, but something stakeholders can use.</p></div>
+<div class="grid3">
+  <div class="card"><div class="icon">01</div><h3>BI & Visualization</h3><p>Power BI and Tableau dashboards for KPI monitoring, WBR reporting, management reviews and business decision support.</p></div>
+  <div class="card"><div class="icon">02</div><h3>Data Preparation</h3><p>SQL, Excel, Power Query and Python workflows for cleaning, validation, transformation, reconciliation and standardization.</p></div>
+  <div class="card"><div class="icon">03</div><h3>Automation</h3><p>Python, Pandas, VBA and reporting automation to reduce repetitive work and improve data-processing efficiency.</p></div>
+</div>
+</div></section>
+
+<section id="projects" style="background:#eef2f7"><div class="container">
+<div class="section-head"><div><div class="kicker">Selected Work</div><h2>Projects</h2></div><p class="lead">A mix of Power BI reporting, data automation and API-driven analytics.</p></div>
+<div class="grid3">
+  <article class="card project">
+    <img src="assets/air-quality-preview.png" alt="Chennai Air Quality Power BI project preview">
+    <div class="project-body">
+      <div class="kicker">Power BI • API Analytics</div><h3>Chennai Air Quality Analysis</h3>
+      <p>Interactive air-quality reporting using hourly Open-Meteo data for Chennai, covering historical and forecast periods.</p>
+      <div class="tags"><span class="tag">Power Query</span><span class="tag">DAX</span><span class="tag">API</span><span class="tag">Data Visualization</span></div>
+      <ul><li>Extracted PM2.5, PM10, CO, NO₂, SO₂, O₃ and European AQI data.</li><li>Created pollutant KPI measures and comparison visuals.</li><li>Designed an executive-friendly AQI interpretation layout.</li></ul>
+      <div class="links"><a class="btn primary" href="Air_Index_Analysis.pbix">PBIX File</a></div>
+    </div>
+  </article>
+
+  <article class="card project">
+    <div style="height:230px;background:linear-gradient(135deg,#18243b,#7c5cff);display:grid;place-items:center;color:white;font-size:28px;font-weight:800">FIFA WORLD CUP<br>MIS REPORTING</div>
+    <div class="project-body">
+      <div class="kicker">Power BI • MIS</div><h3>FIFA World Cup MIS Reporting Dashboard</h3>
+      <p>Interactive MIS dashboard developed from historical datasets with Power Query, DAX and data modelling.</p>
+      <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Data Modeling</span></div>
+      <ul><li>Cleaned duplicates, missing values and inconsistent formats.</li><li>Built KPI tracking and tournament-wise performance views.</li><li>Created WBR-style reporting for trends and variances.</li></ul>
+    </div>
+  </article>
+
+  <article class="card project">
+    <div style="height:230px;background:linear-gradient(135deg,#ff7a3d,#ffb36d);display:grid;place-items:center;color:white;font-size:28px;font-weight:800;text-align:center">CUSTOMER &<br>COMPANY DATA<br>AUTOMATION</div>
+    <div class="project-body">
+      <div class="kicker">Python • Pandas • Data Quality</div><h3>Customer & Company Contact Data Automation</h3>
+      <p>Python workflow for cleaning, deduplicating, enriching and standardizing company-level trade data.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">ETL</span><span class="tag">Automation</span></div>
+      <ul><li>Standardized company records and removed duplicates.</li><li>Integrated structured/web sources for company and contact enrichment.</li><li>Added source-weighted scoring, verification and confidence classification.</li></ul>
+    </div>
+  </article>
+</div>
+</div></section>
+
+<section id="skills"><div class="container">
+<div class="section-head"><div><div class="kicker">Toolkit</div><h2>Core skills</h2></div></div>
+<div class="skills">
+  <div class="skill">Power BI<small>Dashboards • Semantic models • KPI reporting</small></div>
+  <div class="skill">DAX<small>Measures • Calculations • Time intelligence</small></div>
+  <div class="skill">Power Query<small>ETL • Transformation • Data cleaning</small></div>
+  <div class="skill">Tableau<small>Dashboards • Data visualization</small></div>
+  <div class="skill">SQL / MySQL<small>ERP extraction • Analysis • Validation</small></div>
+  <div class="skill">Python / Pandas<small>Automation • Data processing</small></div>
+  <div class="skill">Excel / VBA<small>Advanced Excel • Reporting automation</small></div>
+  <div class="skill">Data Analytics<small>Trend • Variance • KPI/SLA analysis</small></div>
+</div>
+</div></section>
+
+<section id="experience" style="background:#eef2f7"><div class="container">
+<div class="section-head"><div><div class="kicker">Experience</div><h2>Professional journey</h2></div></div>
+<div class="timeline">
+  <div class="timeline-item"><div class="meta">JUNE 2025 — PRESENT</div><h3>Data Analyst · Texcoms Worldwide</h3>
+  <p>Extract and analyze ERP data using SQL; prepare and validate weekly, monthly and annual datasets; maintain Power BI and Tableau dashboards for WBR and monthly IDM meetings; analyze Sales and Sourcing KPIs and trends; build customer databases; and automate recurring reporting/data-processing tasks using Python, VBA and Excel.</p></div>
+</div>
+<div class="grid3">
+  <div class="card cert"><div class="cert-icon">PL</div><div><h3>Microsoft PL-300</h3><p>Power BI Data Analyst Associate<br>Issued Dec 2025 · Expires Dec 2026</p></div></div>
+  <div class="card cert"><div class="cert-icon">AI</div><div><h3>AI Automation & Agentic AI</h3><p>n8n Bootcamp · Udemy<br>Completed Dec 2025</p></div></div>
+  <div class="card cert"><div class="cert-icon">PY</div><div><h3>Python Data Capstone</h3><p>University of Michigan · Coursera<br>Completed Dec 2023</p></div></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="container"><div class="contact">
+<div class="kicker" style="color:#ffb089">Let's connect</div>
+<h2 style="color:white">Looking for a Power BI / Data Analytics opportunity?</h2>
+<p>I'm targeting Power BI Developer, Data Analyst and BI Analyst roles where I can combine visualization, SQL, data modelling and automation to solve business problems.</p>
+<div class="actions">
+<a class="btn" href="mailto:bhuvanavijay70@gmail.com">Email Me</a>
+<a class="btn" href="https://www.linkedin.com/in/bhuvana-vijay" target="_blank" rel="noopener">Connect on LinkedIn</a>
+<a class="btn" href="Bhuvana_Vijay_Resume.pdf">Resume</a>
+</div>
+</div></div></section>
+
+<footer class="container"><span>© 2026 Bhuvana Vijay</span><span>Power BI • Tableau • SQL • Python • Data Visualization</span></footer>
+</body>
+</html>
