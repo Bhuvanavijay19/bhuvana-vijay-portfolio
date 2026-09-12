@@ -31,7 +31,7 @@ h1{font-size:clamp(44px,6vw,72px);line-height:1.02;letter-spacing:-3px;margin:18
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 .profile-card{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:28px;padding:28px}
 .profile-top{display:flex;align-items:center;gap:18px}
-.avatar{width:74px;height:74px;border-radius:20px;background:var(--navy);color:white;display:grid;place-items:center;font-size:26px;font-weight:800}
+.avatar{   width:74px;   height:74px;   border-radius:20px;   overflow:hidden;   background:var(--navy);   flex:0 0 74px; }  .avatar img{   width:100%;   height:100%;   display:block;   object-fit:cover;   object-position:center; }
 .profile-card h3{margin:0}.profile-card small{color:var(--muted)}
 .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .badge{padding:8px 10px;border-radius:10px;background:#f1f4f8;font-size:12px;font-weight:700}
@@ -82,7 +82,16 @@ footer{padding:35px 0;color:var(--muted);font-size:13px;display:flex;justify-con
     </div>
   </div>
   <div class="profile-card">
-    <div class="profile-top"><div class="avatar">BV</div><div><h3>Bhuvana Vijay</h3><small>Data Analyst · Texcoms Worldwide</small></div></div>
+    <div class="profile-card">     
+      <div class="profile-top">         
+        <div class="avatar">             
+          <img src="assets/profile-photo.jpg" alt="Bhuvana Vijay">         
+        </div>         
+        <div>             
+          <h3>Bhuvana Vijay</h3>             
+          <small>Data Analyst · Texcoms Worldwide</small>         
+        </div>     
+      </div>
     <div class="badges">
       <span class="badge">Power BI</span><span class="badge">Tableau</span><span class="badge">DAX</span><span class="badge">Power Query</span>
       <span class="badge">SQL / MySQL</span><span class="badge">Python / Pandas</span><span class="badge">Excel</span><span class="badge">ETL</span>
