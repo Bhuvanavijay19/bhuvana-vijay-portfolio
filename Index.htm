@@ -1,0 +1,1622 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bhuvana Vijay — Power BI Developer, Data Analyst and BI Analyst portfolio. Microsoft PL-300 certified.">
+<title>Bhuvana Vijay | Power BI Developer • Data Analyst</title>
+
+<style>
+:root {
+  --bg:#f7f9fc;
+  --surface:#ffffff;
+  --ink:#172033;
+  --muted:#5f6b7a;
+  --line:#e6eaf0;
+  --accent:#ff7a3d;
+  --accent2:#7c5cff;
+  --navy:#18243b;
+  --shadow:0 18px 55px rgba(23,32,51,.09);
+  --radius:24px;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+.container {
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* NAVIGATION */
+
+nav {
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(247,249,252,.95);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+
+.navin {
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.logo {
+  font-weight:800;
+  letter-spacing:-.4px;
+}
+
+.logo span {
+  color:var(--accent);
+}
+
+.navlinks {
+  display:flex;
+  gap:24px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.navlinks a:hover {
+  color:var(--ink);
+}
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:700;
+  border:1px solid var(--line);
+  background:white;
+  transition:.2s;
+}
+
+.btn:hover {
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(23,32,51,.1);
+}
+
+.btn.primary {
+  background:var(--navy);
+  color:white;
+  border-color:var(--navy);
+}
+
+/* HERO */
+
+.hero {
+  padding:92px 0 72px;
+  background:linear-gradient(
+    135deg,
+    #f7f9fc 0%,
+    #eef3ff 55%,
+    #fff4ed 100%
+  );
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:55px;
+  align-items:center;
+}
+
+.eyebrow {
+  display:inline-flex;
+  padding:7px 11px;
+  border-radius:999px;
+  background:white;
+  border:1px solid var(--line);
+  font-size:12px;
+  font-weight:800;
+  color:var(--accent);
+}
+
+h1 {
+  font-size:clamp(44px,6vw,72px);
+  line-height:1.02;
+  letter-spacing:-3px;
+  margin:18px 0;
+}
+
+.hero p {
+  font-size:19px;
+  color:var(--muted);
+}
+
+.actions {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:26px;
+}
+
+.profile-card {
+  background:white;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  border-radius:28px;
+  padding:28px;
+}
+
+.profile-top {
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.avatar {
+  width:74px;
+  height:74px;
+  border-radius:20px;
+  overflow:hidden;
+  background:var(--navy);
+  flex:0 0 74px;
+}
+
+.avatar img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.profile-card h3 {
+  margin:0;
+}
+
+.profile-card small {
+  color:var(--muted);
+}
+
+.badges {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:22px;
+}
+
+.badge {
+  padding:8px 10px;
+  border-radius:10px;
+  background:#f1f4f8;
+  font-size:12px;
+  font-weight:700;
+}
+
+/* COMMON SECTIONS */
+
+section {
+  padding:78px 0;
+}
+
+.section-head {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:end;
+  margin-bottom:30px;
+}
+
+.kicker {
+  font-size:12px;
+  color:var(--accent);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+h2 {
+  font-size:36px;
+  letter-spacing:-1.5px;
+  margin:6px 0;
+}
+
+.lead {
+  color:var(--muted);
+  max-width:680px;
+}
+
+.grid3 {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+
+.card {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:25px;
+  box-shadow:0 10px 30px rgba(23,32,51,.04);
+}
+
+.card h3 {
+  margin:8px 0;
+}
+
+.card p {
+  color:var(--muted);
+  font-size:14px;
+}
+
+.icon {
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:#fff0e8;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  color:var(--accent);
+}
+
+/* WIDE PROJECTS SECTION */
+
+#projects .container {
+  width:96%;
+  max-width:1600px;
+}
+
+.projects-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:20px;
+  align-items:stretch;
+}
+
+.project {
+  overflow:hidden;
+  padding:0;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+}
+
+/* PROJECT PREVIEW */
+
+.project-image-wrap {
+  height:205px;
+  position:relative;
+  overflow:hidden;
+  background:#eaf0f7;
+}
+
+.project-image-wrap img {
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  position:relative;
+  z-index:1;
+}
+
+.project-image-fallback {
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  padding:20px;
+  text-align:center;
+  color:#253858;
+  font-size:20px;
+  font-weight:900;
+  background:linear-gradient(135deg,#dceaff,#b7d4ff);
+}
+
+.fifa-fallback {
+  background:linear-gradient(135deg,#1d3557,#4c78a8);
+  color:white;
+}
+
+.customer-cover {
+  height:205px;
+  background:linear-gradient(135deg,#ff7a3d,#ffb36d);
+  display:grid;
+  place-items:center;
+  color:white;
+  font-size:23px;
+  font-weight:800;
+  text-align:center;
+  padding:18px;
+}
+
+.automation-cover {
+  height:205px;
+  background:linear-gradient(
+    135deg,
+    #18243b,
+    #4b3b8f 65%,
+    #7c5cff
+  );
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  text-align:center;
+  padding:18px;
+}
+
+.automation-cover strong {
+  font-size:20px;
+  line-height:1.3;
+}
+
+.automation-flow {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:7px;
+  flex-wrap:wrap;
+}
+
+.automation-flow span {
+  border:1px solid rgba(255,255,255,.4);
+  background:rgba(255,255,255,.13);
+  border-radius:9px;
+  padding:7px 9px;
+  font-size:11px;
+  font-weight:800;
+}
+
+.automation-flow b {
+  color:#ffb36d;
+}
+
+/* PROJECT CONTENT ALIGNMENT */
+
+.project-body {
+  padding:22px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.project-body > * {
+  margin-top:0;
+  margin-bottom:0;
+  min-width:0;
+}
+
+.project h3 {
+  font-size:18px;
+  line-height:1.4;
+  overflow-wrap:anywhere;
+}
+
+.project p {
+  font-size:13px;
+  line-height:1.65;
+  color:var(--muted);
+}
+
+.project-outcome {
+  background:#f1f4ff;
+  border-left:3px solid var(--accent2);
+  border-radius:9px;
+  padding:12px;
+}
+
+.project-outcome strong {
+  display:block;
+  font-size:12px;
+  line-height:1.5;
+  color:var(--navy);
+}
+
+.project-outcome small {
+  display:block;
+  margin-top:5px;
+  font-size:11px;
+  line-height:1.6;
+  color:var(--muted);
+}
+
+.tags {
+  display:flex;
+  flex-wrap:wrap;
+  align-content:start;
+  gap:7px;
+}
+
+.tag {
+  font-size:11px;
+  padding:6px 9px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:var(--muted);
+}
+
+.project ul {
+  padding-left:18px;
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.65;
+}
+
+.project li {
+  margin-bottom:8px;
+}
+
+.project .links {
+  display:flex;
+  gap:9px;
+  flex-wrap:wrap;
+  margin-top:auto;
+  padding-top:15px;
+}
+
+/* SKILLS */
+
+.skills {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+
+.skill {
+  background:white;
+  border:1px solid var(--line);
+  padding:18px;
+  border-radius:16px;
+  font-weight:750;
+}
+
+.skill small {
+  display:block;
+  color:var(--muted);
+  font-weight:500;
+  margin-top:3px;
+}
+
+/* EXPERIENCE */
+
+.timeline {
+  border-left:2px solid #dfe5ef;
+  margin-left:10px;
+  padding-left:28px;
+}
+
+.timeline-item {
+  position:relative;
+  margin-bottom:32px;
+}
+
+.timeline-item:before {
+  content:"";
+  position:absolute;
+  left:-37px;
+  top:7px;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:var(--accent);
+  border:4px solid var(--bg);
+}
+
+.timeline-item h3 {
+  margin:0;
+}
+
+.timeline-item .meta {
+  font-size:13px;
+  color:var(--accent);
+  font-weight:800;
+}
+
+.timeline-item p {
+  color:var(--muted);
+}
+
+/* CERTIFICATIONS */
+
+.cert {
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.cert-icon {
+  width:64px;
+  height:64px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  flex:0 0 64px;
+}
+
+.microsoft-logo {
+  background:#f5f5f5;
+}
+
+.ms-grid {
+  width:34px;
+  height:34px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  gap:3px;
+}
+
+.ms-grid span:nth-child(1) {
+  background:#f25022;
+}
+
+.ms-grid span:nth-child(2) {
+  background:#7fba00;
+}
+
+.ms-grid span:nth-child(3) {
+  background:#00a4ef;
+}
+
+.ms-grid span:nth-child(4) {
+  background:#ffb900;
+}
+
+.udemy-logo {
+  background:#f5edff;
+}
+
+.udemy-u {
+  font-size:42px;
+  font-weight:900;
+  color:#a435f0;
+}
+
+.coursera-logo {
+  background:#e8f1ff;
+}
+
+.coursera-c {
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#0056d2;
+  color:white;
+  display:grid;
+  place-items:center;
+  font-size:30px;
+  font-weight:900;
+}
+
+.certificate-link {
+  display:inline-block;
+  margin-top:8px;
+  color:var(--accent);
+  font-size:13px;
+  font-weight:800;
+}
+
+.certificate-link:hover {
+  text-decoration:underline;
+}
+
+/* CONTACT */
+
+.contact {
+  background:var(--navy);
+  color:white;
+  border-radius:30px;
+  padding:48px;
+}
+
+.contact p {
+  color:#cbd5e5;
+}
+
+.contact a {
+  color:#000;
+}
+
+footer {
+  padding:35px 0;
+  color:var(--muted);
+  font-size:13px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px) {
+  .projects-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:850px) {
+  .hero-grid,
+  .grid3 {
+    grid-template-columns:1fr;
+  }
+
+  .skills {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .navlinks {
+    display:none;
+  }
+
+  .hero {
+    padding-top:60px;
+  }
+}
+
+@media(max-width:600px) {
+  .projects-grid {
+    grid-template-columns:1fr;
+  }
+
+  .project-image-wrap,
+  .customer-cover,
+  .automation-cover {
+    height:230px;
+  }
+
+  .section-head {
+    display:block;
+  }
+}
+
+@media(max-width:520px) {
+  h1 {
+    letter-spacing:-2px;
+  }
+
+  .skills {
+    grid-template-columns:1fr;
+  }
+
+  .contact {
+    padding:30px;
+  }
+
+  footer {
+    flex-direction:column;
+  }
+
+  .navin > .btn {
+    font-size:11px;
+    padding:9px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="container navin">
+
+    <a class="logo" href="#home">
+      Bhuvana Vijay<span>.</span>
+    </a>
+
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a class="btn primary"
+       href="Bhuvana_Vijay_Resume.pdf"
+       download>
+      Download Resume
+    </a>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<header id="home" class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <span class="eyebrow">
+        MICROSOFT PL-300 CERTIFIED • 1.4 YEARS EXPERIENCE
+      </span>
+
+      <h1>
+        Power BI Developer.<br>
+        Data Analyst.<br>
+        BI Storyteller.
+      </h1>
+
+      <p>
+        I turn operational and business data into
+        reliable, interactive dashboards and actionable
+        insights using Power BI, Tableau, SQL, Python
+        and modern data-transformation workflows.
+      </p>
+
+      <div class="actions">
+
+        <a class="btn primary" href="#projects">
+          View My Projects →
+        </a>
+
+        <a class="btn"
+           href="https://www.linkedin.com/in/bhuvanavijay2003/"
+           target="_blank"
+           rel="noopener">
+          LinkedIn ↗
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="profile-card">
+
+      <div class="profile-top">
+
+        <div class="avatar">
+          <img src="profile-photo.png"
+               alt="Bhuvana Vijay">
+        </div>
+
+        <div>
+          <h3>Bhuvana Vijay</h3>
+          <small>Data Analyst · Texcoms Worldwide</small>
+        </div>
+
+      </div>
+
+      <div class="badges">
+        <span class="badge">Power BI</span>
+        <span class="badge">Tableau</span>
+        <span class="badge">DAX</span>
+        <span class="badge">Power Query</span>
+        <span class="badge">SQL / MySQL</span>
+        <span class="badge">Python / Pandas</span>
+        <span class="badge">Excel</span>
+        <span class="badge">ETL</span>
+        <span class="badge">Google Apps Script</span>
+        <span class="badge">Automation</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <div class="kicker">About</div>
+        <h2>Analytics with a business purpose.</h2>
+      </div>
+
+      <p class="lead">
+        My work combines data extraction, validation,
+        ETL, dashboarding, business analysis and
+        automation—so the output is not just a report,
+        but something stakeholders can use.
+      </p>
+
+    </div>
+
+    <div class="grid3">
+
+      <div class="card">
+        <div class="icon">01</div>
+        <h3>BI &amp; Visualization</h3>
+        <p>
+          Power BI and Tableau dashboards for KPI
+          monitoring, WBR reporting, management reviews
+          and business decision support.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">02</div>
+        <h3>Data Preparation</h3>
+        <p>
+          SQL, Excel, Power Query and Python workflows
+          for cleaning, validation, transformation,
+          reconciliation and standardization.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">03</div>
+        <h3>Automation</h3>
+        <p>
+          Python, Pandas, VBA and Google Apps Script
+          automation to reduce repetitive work and
+          improve data-processing efficiency.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" style="background:#eef2f7">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <div class="kicker">Selected Work</div>
+        <h2>Projects</h2>
+      </div>
+
+      <p class="lead">
+        A mix of Power BI reporting, data automation
+        and API-driven analytics.
+      </p>
+
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- PROJECT 1: AIR QUALITY -->
+
+      <article class="card project">
+
+        <div class="project-image-wrap">
+
+          <img src="air-quality-preview.png"
+               alt="Chennai Air Quality Power BI dashboard"
+               onerror="this.style.display='none'">
+
+          <div class="project-image-fallback">
+            CHENNAI AIR QUALITY<br>
+            POWER BI DASHBOARD
+          </div>
+
+        </div>
+
+        <div class="project-body">
+
+          <div class="kicker">
+            Power BI • API Analytics
+          </div>
+
+          <h3>Chennai Air Quality Analysis</h3>
+
+          <p>
+            Interactive air-quality reporting using
+            hourly Open-Meteo data for Chennai,
+            covering historical and forecast periods.
+          </p>
+
+          <div class="project-outcome">
+            <strong>Data-to-dashboard reporting</strong>
+            <small>
+              Converted hourly API data into a reusable
+              Power BI report for monitoring pollutants
+              and interpreting AQI trends.
+            </small>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Power Query</span>
+            <span class="tag">DAX</span>
+            <span class="tag">API</span>
+            <span class="tag">Data Visualization</span>
+          </div>
+
+          <ul>
+            <li>
+              Extracted hourly air-quality data from
+              the Open-Meteo API, including PM2.5,
+              PM10, CO, NO₂, SO₂, O₃ and AQI.
+            </li>
+
+            <li>
+              Cleaned and transformed historical
+              and forecast datasets using Power Query.
+            </li>
+
+            <li>
+              Developed DAX measures to calculate
+              pollutant KPIs and analyze air-quality trends.
+            </li>
+
+            <li>
+              Created interactive Power BI visuals
+              to compare pollutant levels across
+              different time periods.
+            </li>
+
+            <li>
+              Designed an executive-friendly dashboard
+              to simplify air-quality monitoring
+              and interpretation.
+            </li>
+          </ul>
+
+          <div class="links">
+            <a class="btn primary"
+               href="Air_Index_Analysis.pbix"
+               download>
+              PBIX File
+            </a>
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- PROJECT 2: FIFA WORLD CUP -->
+
+      <article class="card project">
+
+        <div class="project-image-wrap">
+
+          <img src="fifa-world-cup-preview.png"
+               alt="FIFA World Cup MIS Reporting Power BI dashboard"
+               onerror="this.style.display='none'">
+
+          <div class="project-image-fallback fifa-fallback">
+            FIFA WORLD CUP<br>
+            MIS DASHBOARD
+          </div>
+
+        </div>
+
+        <div class="project-body">
+
+          <div class="kicker">
+            Power BI • MIS
+          </div>
+
+          <h3>
+            FIFA World Cup MIS Reporting Dashboard
+          </h3>
+
+          <p>
+            Interactive MIS dashboard developed from
+            historical datasets with Power Query,
+            DAX and data modelling.
+          </p>
+
+          <div class="project-outcome">
+            <strong>Structured MIS reporting</strong>
+            <small>
+              Transformed historical tournament records
+              into interactive performance views
+              for comparative analysis.
+            </small>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Power Query</span>
+            <span class="tag">Data Modeling</span>
+          </div>
+
+          <ul>
+            <li>
+              Collected and consolidated historical
+              FIFA World Cup datasets for
+              performance analysis.
+            </li>
+
+            <li>
+              Cleaned duplicate records, missing
+              values and inconsistent formats
+              using Power Query.
+            </li>
+
+            <li>
+              Developed data models and DAX measures
+              to calculate tournament performance KPIs.
+            </li>
+
+            <li>
+              Created interactive dashboards to
+              analyze team performance, tournament
+              trends and comparisons.
+            </li>
+
+            <li>
+              Designed MIS-style reports with filters
+              and visualizations to support
+              performance monitoring.
+            </li>
+          </ul>
+
+        </div>
+
+      </article>
+
+      <!-- PROJECT 3: CUSTOMER DATA AUTOMATION -->
+
+      <article class="card project">
+
+        <div class="customer-cover">
+          CUSTOMER &amp;<br>
+          COMPANY DATA<br>
+          AUTOMATION
+        </div>
+
+        <div class="project-body">
+
+          <div class="kicker">
+            Python • Pandas • Data Quality
+          </div>
+
+          <h3>
+            Customer &amp; Company Contact Data Automation
+          </h3>
+
+          <p>
+            Python workflow for cleaning,
+            deduplicating, enriching and
+            standardizing company-level trade data.
+          </p>
+
+          <div class="project-outcome">
+            <strong>Cleaner, more usable company data</strong>
+            <small>
+              Reduced repetitive data preparation
+              through a repeatable cleaning
+              and enrichment workflow.
+            </small>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">ETL</span>
+            <span class="tag">Automation</span>
+          </div>
+
+          <ul>
+            <li>
+              Developed a Python automation workflow
+              to clean and standardize
+              company-level trade data.
+            </li>
+
+            <li>
+              Identified and removed duplicate
+              company records to improve data quality.
+            </li>
+
+            <li>
+              Integrated structured and web-based
+              sources to enrich company
+              and contact information.
+            </li>
+
+            <li>
+              Implemented source-weighted scoring
+              and confidence classification
+              to assess data reliability.
+            </li>
+
+            <li>
+              Automated data validation and
+              verification to reduce repetitive
+              manual processing.
+            </li>
+          </ul>
+
+        </div>
+
+      </article>
+
+      <!-- PROJECT 4: SSFTM AUTOMATION -->
+
+      <article class="card project">
+
+        <div class="automation-cover">
+
+          <strong>
+            SSFTM SHOWCASE<br>
+            WORKFLOW AUTOMATION
+          </strong>
+
+          <div class="automation-flow">
+            <span>Google Forms</span>
+            <b>→</b>
+            <span>Google Slides</span>
+            <b>→</b>
+            <span>PowerPoint</span>
+          </div>
+
+        </div>
+
+        <div class="project-body">
+
+          <div class="kicker">
+            Google Apps Script • Workflow Automation
+          </div>
+
+          <h3>
+            SSFTM Showcase — Automated Presentation Generation
+          </h3>
+
+          <p>
+            Built an end-to-end workflow that converts
+            employee achievement submissions into
+            standardized six-slide presentations,
+            replacing repetitive manual preparation.
+          </p>
+
+          <div class="project-outcome">
+            <strong>
+              2-person manual workflow automated
+            </strong>
+            <small>
+              Form submissions automatically generate
+              branded six-slide PowerPoint presentations,
+              with status tracking and Drive storage.
+            </small>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Google Forms</span>
+            <span class="tag">Google Slides</span>
+            <span class="tag">Google Sheets</span>
+            <span class="tag">PowerPoint</span>
+          </div>
+
+          <ul>
+            <li>
+              Automated Google Form creation and
+              submission-triggered presentation generation.
+            </li>
+
+            <li>
+              Mapped submitted responses into predefined
+              six-slide presentation templates.
+            </li>
+
+            <li>
+              Automatically exported PowerPoint files
+              and saved them in Google Drive.
+            </li>
+
+            <li>
+              Implemented Google Sheets status tracking,
+              generated file links and error logging.
+            </li>
+
+            <li>
+              Reduced repetitive reporting and
+              presentation preparation activities.
+            </li>
+          </ul>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">Toolkit</div>
+        <h2>Core skills</h2>
+      </div>
+    </div>
+
+    <div class="skills">
+
+      <div class="skill">
+        Power BI
+        <small>
+          Dashboards • Semantic models • KPI reporting
+        </small>
+      </div>
+
+      <div class="skill">
+        DAX
+        <small>
+          Measures • Calculations • Time intelligence
+        </small>
+      </div>
+
+      <div class="skill">
+        Power Query
+        <small>
+          ETL • Transformation • Data cleaning
+        </small>
+      </div>
+
+      <div class="skill">
+        Tableau
+        <small>
+          Dashboards • Data visualization
+        </small>
+      </div>
+
+      <div class="skill">
+        SQL / MySQL
+        <small>
+          ERP extraction • Analysis • Validation
+        </small>
+      </div>
+
+      <div class="skill">
+        Python / Pandas
+        <small>
+          Automation • Data processing
+        </small>
+      </div>
+
+      <div class="skill">
+        Excel / VBA
+        <small>
+          Advanced Excel • Reporting automation
+        </small>
+      </div>
+
+      <div class="skill">
+        Data Analytics
+        <small>
+          Trend • Variance • KPI/SLA analysis
+        </small>
+      </div>
+
+      <div class="skill">
+        Google Apps Script
+        <small>
+          Forms • Slides • PowerPoint automation
+        </small>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience" style="background:#eef2f7">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">Experience</div>
+        <h2>Professional journey</h2>
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="meta">
+          JUNE 2025 — PRESENT
+        </div>
+
+        <h3>Data Analyst · Texcoms Worldwide</h3>
+
+        <p>
+          Extract and analyze ERP data using SQL;
+          prepare and validate weekly, monthly and
+          annual datasets; maintain Power BI and
+          Tableau dashboards for WBR and monthly IDM
+          meetings; analyze Sales and Sourcing KPIs
+          and trends; build customer databases;
+          and automate recurring reporting and
+          data-processing tasks using Python,
+          VBA and Excel.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- CERTIFICATIONS -->
+
+    <div class="grid3">
+
+      <!-- MICROSOFT -->
+
+      <div class="card cert">
+
+        <div class="cert-icon microsoft-logo">
+          <div class="ms-grid">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div>
+
+          <h3>Microsoft PL-300</h3>
+
+          <p>
+            Power BI Data Analyst Associate<br>
+            Issued Dec 2025 · Expires Dec 2026
+          </p>
+
+          <a class="certificate-link"
+             href="https://learn.microsoft.com/en-us/users/bhuvanavijay-0011/credentials/a7260141a79d26f1"
+             target="_blank"
+             rel="noopener">
+            View Credential ↗
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- UDEMY -->
+
+      <div class="card cert">
+
+        <div class="cert-icon udemy-logo">
+          <div class="udemy-u">U</div>
+        </div>
+
+        <div>
+
+          <h3>AI Automation &amp; Agentic AI</h3>
+
+          <p>
+            n8n Bootcamp · Udemy<br>
+            Completed Dec 2025
+          </p>
+
+          <a class="certificate-link"
+             href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-9713a5d7-450f-458c-ac0f-2155ead4a12b.pdf"
+             target="_blank"
+             rel="noopener">
+            View Certificate ↗
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- COURSERA -->
+
+      <div class="card cert">
+
+        <div class="cert-icon coursera-logo">
+          <div class="coursera-c">C</div>
+        </div>
+
+        <div>
+
+          <h3>Python Data Capstone</h3>
+
+          <p>
+            University of Michigan · Coursera<br>
+            Completed Dec 2023
+          </p>
+
+          <a class="certificate-link"
+             href="https://www.coursera.org/account/accomplishments/verify/N8BYMN5ACGM"
+             target="_blank"
+             rel="noopener">
+            Verify Certificate ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="contact">
+
+      <div class="kicker" style="color:#ffb089">
+        Let's connect
+      </div>
+
+      <h2 style="color:white">
+        Looking for a Power BI / Data Analytics opportunity?
+      </h2>
+
+      <p>
+        I'm targeting Power BI Developer, Data Analyst
+        and BI Analyst roles where I can combine
+        visualization, SQL, data modelling and automation
+        to solve business problems.
+      </p>
+
+      <div class="actions">
+
+        <a class="btn"
+           href="mailto:bhuvanavijay70@gmail.com">
+          Email Me
+        </a>
+
+        <a class="btn"
+           href="https://www.linkedin.com/in/bhuvanavijay2003/"
+           target="_blank"
+           rel="noopener">
+          Connect on LinkedIn
+        </a>
+
+        <a class="btn"
+           href="Bhuvana_Vijay_Resume.pdf">
+          Resume
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="container">
+
+  <span>© 2026 Bhuvana Vijay</span>
+
+  <span>
+    Power BI • Tableau • SQL • Python • Data Visualization
+  </span>
+
+</footer>
+
+<!-- ALIGN PROJECT CARD CONTENT -->
+
+<script>
+(function () {
+
+  const selectors = [
+    ".kicker",
+    "h3",
+    "p",
+    ".project-outcome",
+    ".tags",
+    "ul",
+    ".links"
+  ];
+
+  function alignProjects() {
+
+    const bodies = Array.from(
+      document.querySelectorAll(
+        ".projects-grid .project-body"
+      )
+    );
+
+    // Reset before measuring
+    bodies.forEach(body => {
+      body.style.display = "flex";
+      body.style.gridTemplateRows = "";
+    });
+
+    // Use normal layout on tablets and phones
+    if (window.innerWidth <= 1100) {
+      return;
+    }
+
+    const heights = selectors.map(selector => {
+
+      const measured = bodies.map(body => {
+
+        const element = body.querySelector(
+          ":scope > " + selector
+        );
+
+        return element
+          ? element.getBoundingClientRect().height
+          : 0;
+
+      });
+
+      return Math.ceil(Math.max(...measured, 0));
+
+    });
+
+    // Reserve equal space for the download link
+    heights[6] = Math.max(heights[6], 42);
+
+    bodies.forEach(body => {
+
+      body.style.display = "grid";
+
+      body.style.gridTemplateRows =
+        heights.map(height => height + "px").join(" ");
+
+      body.style.alignContent = "start";
+
+    });
+
+  }
+
+  let resizeTimer;
+
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(alignProjects, 120);
+  });
+
+  window.addEventListener("load", alignProjects);
+
+  if (document.fonts) {
+    document.fonts.ready.then(alignProjects);
+  }
+
+  alignProjects();
+
+})();
+</script>
+
+</body>
+</html>
